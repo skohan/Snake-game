@@ -1,4 +1,0 @@
-# Snake-game
-The code needs Pygame and Python installed to run.
-Improvisation required.DocumentationDocumentationDocumentationDDocumentationDocumentationDocumentationDDocumentationDocumentationDocumentationDDocumentationDocumentationDocumentationDDocumentationDocumentationDocumentationDDocumentationDocumentationDocumentationDDocumentationDocumentationDocumentationDocumentation is still going on.
-And convert it, if you can, in exe file.
