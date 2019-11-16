@@ -21,14 +21,6 @@ clock = pygame.time.Clock()
 surface = pygame.display.set_mode((H,W))
         
 pygame.display.set_caption('Snake')
-###
-
-#def OhCrap(position):
-#	for p in position[5:]: 
-#		if math.sqrt(((position[0][0]-p[0])**2)+((position[0][1] -p[1])**2)) < 9 :
-#			return True
-#		else:
-#			return False
 
 
 def tex_object(text,font):
@@ -144,8 +136,6 @@ def game_start():
 		TextRect.center = ((surface.get_height()/2), (surface.get_width()/3))
 		surface.blit(TextSurf,TextRect)
 		mouse = pygame.mouse.get_pos()
-
-		#print(mouse)
 
 		if 300>mouse[0]>200 and 300>mouse[1]>250:
 			pygame.draw.rect(surface,green,(200,250,100,50))
