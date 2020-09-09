@@ -1,4 +1,4 @@
-#Welcome to Snake game
+# Welcome to Snake game
 
 Currently this game is available in two languages, C++ and Python.
 
