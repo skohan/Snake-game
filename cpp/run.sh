@@ -1,4 +1,5 @@
-echo Compiling
+#!/bin/bash
+echo Compiling...
 # make && echo Running && ./start
 
 time( g++ src/headers/*.h src/*.cpp -lSDL2 -o start && echo Finished
