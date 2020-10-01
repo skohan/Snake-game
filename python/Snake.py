@@ -93,6 +93,11 @@ def game_loop():
 		if x>surface.get_width() or x<0 or y>surface.get_height() or y<0: #or OhCrap(snake_position):
 			crashed = True
 			crash()
+
+		if snake_position[0] in snake_position[1:]:
+			crashed = True
+			crash()
+
 		if math.sqrt(((x-X)**2)+((y -Y)**2)) <= 15  :
 			X = random.randrange(10,495,10)
 			Y = random.randrange(10,495,10)
