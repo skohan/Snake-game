@@ -45,7 +45,7 @@ function init() {
 function loadImages() {
     
     head = new Image();
-    head.src = 'head.png';    
+    head.src = 'head.png';  //Change path of images if any
     
     ball = new Image();
     ball.src = 'dot.png'; 
@@ -105,14 +105,7 @@ function gameOver() {
     ctx.fillText('Game over', C_WIDTH/2, C_HEIGHT/2);
 }
 
-function checkApple() {
 
-    if ((x[0] == apple_x) && (y[0] == apple_y)) {
-
-        dots++;
-        locateApple();
-    }
-}
 
 function move() {
 
