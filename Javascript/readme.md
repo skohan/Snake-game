@@ -17,6 +17,8 @@
 
 Playcode Project Url: https://playcode.io/684580/
 
+Also Available at: https://deepsingh132.github.io/snakegame/
+
 ### **Steps to run the game :-**
 
 1) Download the source code and all the assets into a folder
