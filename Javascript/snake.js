@@ -1,10 +1,11 @@
-
 var canvas;
 var ctx;
 
 var head;
 var apple;
 var ball;
+
+var score;
 
 var dots;
 var apple_x;
@@ -31,11 +32,14 @@ const DOWN_KEY = 40;
 var x = new Array(ALL_DOTS);
 var y = new Array(ALL_DOTS);   
 
+
 function init() {
     
     canvas = document.getElementById('myCanvas');
+    canvas.style = "position:absolute; left: 50%; width: 400px; margin-left: -200px;";
     ctx = canvas.getContext('2d');
-
+    
+    
     loadImages();
     createSnake();
     locateApple();
@@ -45,18 +49,19 @@ function init() {
 function loadImages() {
     
     head = new Image();
-    head.src = 'head.png';  //Change path of images if any
+    head.src = 'assets/head.png';    
     
     ball = new Image();
-    ball.src = 'dot.png'; 
+    ball.src = 'assets/dot.png'; 
     
     apple = new Image();
-    apple.src = 'apple.png'; 
+    apple.src = 'assets/apple.png'; 
 }
 
 function createSnake() {
 
     dots = 3;
+    score=0;
 
     for (var z = 0; z < dots; z++) {
         x[z] = 50 - z * 10;
@@ -65,10 +70,12 @@ function createSnake() {
 }
 
 function checkApple() {
-
+  
     if ((x[0] == apple_x) && (y[0] == apple_y)) {
 
         dots++;
+        //score++;
+        score=score+10;
         locateApple();
     }
 }    
@@ -80,6 +87,12 @@ function doDrawing() {
     if (inGame) {
 
         ctx.drawImage(apple, apple_x, apple_y);
+        
+    ctx.fillStyle = '#40FF00';
+    ctx.textBaseline = 'middle'; 
+    ctx.textAlign = 'center'; 
+    ctx.font = 'normal bold 15px serif';
+    ctx.fillText("Score: "+score,C_WIDTH/1.2,C_HEIGHT/15);
 
         for (var z = 0; z < dots; z++) {
             
@@ -102,36 +115,32 @@ function gameOver() {
     ctx.textAlign = 'center'; 
     ctx.font = 'normal bold 18px serif';
     
-    ctx.fillText('Game over', C_WIDTH/2, C_HEIGHT/2);
+    ctx.fillText('Game over !', C_WIDTH/2, C_HEIGHT/2);
+    ctx.fillText('Your Score is:  ',C_WIDTH/2, C_HEIGHT/1.5);
+    ctx.fillText(score,C_WIDTH/1.4, C_HEIGHT/1.5);
 }
-
 
 
 function move() {
 
     for (var z = dots; z > 0; z--) {
-    
         x[z] = x[(z - 1)];
         y[z] = y[(z - 1)];
     }
 
     if (leftDirection) {
-    
         x[0] -= DOT_SIZE;
     }
 
     if (rightDirection) {
-    
         x[0] += DOT_SIZE;
     }
 
     if (upDirection) {
-    
         y[0] -= DOT_SIZE;
     }
 
     if (downDirection) {
-    
         y[0] += DOT_SIZE;
     }
 }    
@@ -146,22 +155,18 @@ function checkCollision() {
     }
 
     if (y[0] >= C_HEIGHT) {
-    
         inGame = false;
     }
 
     if (y[0] < 0) {
-    
        inGame = false;
     }
 
     if (x[0] >= C_WIDTH) {
-    
       inGame = false;
     }
 
     if (x[0] < 0) {
-    
       inGame = false;
     }
 }
