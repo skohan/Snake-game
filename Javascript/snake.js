@@ -17,6 +17,8 @@ var upDirection = false;
 var downDirection = false;
 var inGame = true;    
 
+var intvl;
+
 const DOT_SIZE = 10;
 const ALL_DOTS = 900;
 const MAX_RAND = 29;
@@ -114,12 +116,30 @@ function gameOver() {
     ctx.textBaseline = 'middle'; 
     ctx.textAlign = 'center'; 
     ctx.font = 'normal bold 18px serif';
-    
+
     ctx.fillText('Game over !', C_WIDTH/2, C_HEIGHT/2);
     ctx.fillText('Your Score is:  ',C_WIDTH/2, C_HEIGHT/1.5);
     ctx.fillText(score,C_WIDTH/1.4, C_HEIGHT/1.5);
+    ctx.fillText('Restarting in ',C_WIDTH/2, C_HEIGHT/1.2);
+    var num=5;
+    intvl=setInterval(function(){
+		counter(ctx,num--);
+		},1000);
 }
 
+ function counter(ctx, num) {
+
+if(num == 0){
+ clearInterval(intvl);
+ location.reload();
+ }
+ else{
+ ctx.clearRect(200,205,canvas.width,canvas.height);
+ ctx.fillStyle = "red";
+ ctx.textAlign = "center";
+ ctx.fillText(""+num, C_WIDTH/1.4, C_HEIGHT/1.2);
+ }
+ } 
 
 function move() {
 
