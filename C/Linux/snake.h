@@ -3,9 +3,6 @@
 
 #include<stdbool.h>
 #include<stdlib.h>
-#include<time.h>
-#include<stdio.h>
-#include<string.h>
 
 #define GRID_SIZE 20
 
