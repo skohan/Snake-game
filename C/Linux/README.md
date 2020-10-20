@@ -9,3 +9,5 @@ Eg:
 2. Then open the game folder in terminal and run ``make``
 3. Finally run the program snake in the game folder.  
 ```./snake.out```
+## Controls
+Use `W``A``S``D` to move the snake
