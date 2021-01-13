@@ -1,0 +1,26 @@
+{
+  "name": "snake-game",
+  "version": "1.0.0",
+  "description": "Snake game",
+  "scripts": {
+    "build:js": "gulp js",
+    "build:css": "gulp scss",
+    "build": "gulp build",
+    "watch:js": "webpack --watch",
+    "serve": "gulp serve"
+  },
+  "author": "Mihai Terenti <maikttt@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-csso": "^4.0.1",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-stream": "^6.1.0"
+  }
+}

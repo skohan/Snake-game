@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Snake game!</title>
+    <link rel="stylesheet" href="./dist/css/style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="game-header">
+        <div class="game-score">Score: <span>0</span></div>
+        <div class="game-best-score invisible">Best: <span>0</span></div>
+      </div>
+      <canvas id="display" height="500" width="500"></canvas>
+      <div class="game-modal modal-instructions">
+        <div class="game-modal-body">
+          <div class="game-instructions">
+            <p>Use <span style="color:#ea4335">Space</span> to start / stop game.</p>
+            <p>Use
+              <span style="color:#4285f4">A</span>
+              <span style="color:#34a853">S</span>
+              <span style="color:#ea4335">D</span>
+              <span style="color:#fbbc05">W</span>
+              to controll the snake.
+            </p>
+          </div>
+          <div class="game-resumed">
+            <p class="text-center">Game stopped...</p>
+          </div>
+          <div class="game-over">
+            <p class="text-center">Game over!</p>
+            <p class="text-center game-score">Score: <span>0</span></p>
+          </div>
+        </div>
+        <div>
+          <span class="close-modal">
+            <span class="b-play">Play</span>
+            <span class="b-play-again">Play again</span>
+            <span class="b-resume">Resume</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="./dist/js/bundle.js"></script>
+  </body>
+</html>
