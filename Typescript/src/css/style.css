@@ -1,0 +1,137 @@
+body {
+  background-color: black;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.game {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  width: 500px;
+  background-color: #4a752c;
+  color: #ffffff;
+  font-family: arial, sans serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.game-header .game-score {
+  color:#13dbdc;
+}
+
+.game-best-score {
+  color: #fdc001;
+  transition: all 0.3s;
+}
+
+.game-header .game-score span,
+.game-header .game-best-score span {
+  color: #ffffff;
+}
+
+canvas {
+  height: 500px;
+  width: 500px;
+  outline: 1px solid #fff;
+}
+
+.game-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.7);
+  transition: opacity 0.3s;
+}
+
+.game-modal {
+  opacity: 0;
+}
+
+.game-modal.modal-instructions,
+.game-modal.modal-game-over,
+.game-modal.modal-resume {
+  opacity: 1
+}
+
+.game-modal-body {
+  padding: 16px;
+  background-color: #ffffff;
+  width: 300px;
+  color: #772bdb;
+  margin: 120px auto 30px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.game-modal-body .game-score {
+  color: #fdc001;
+}
+
+.game-modal-body .game-score span {
+  color: #e7471d;
+}
+
+.close-modal {
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
+  width: 300px;
+  background-color: #15c;
+  text-align: center;
+  font-size: 22px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+}
+
+.close-modal .b-play,
+.close-modal .b-play-again,
+.close-modal .b-resume {
+  display: none;
+}
+
+.modal-instructions .close-modal .b-play {
+  display: inline-block;
+}
+
+.modal-game-over .close-modal .b-play-again {
+  display: inline-block;
+}
+
+.modal-resume .close-modal .b-resume {
+  display: inline-block;
+}
+
+.game-modal-body .game-instructions,
+.game-modal-body .game-over,
+.game-modal-body .game-resumed {
+  display: none;
+}
+
+.modal-instructions .game-modal-body .game-instructions {
+  display: block;
+}
+
+.modal-game-over .game-modal-body .game-over {
+  display: block;
+}
+
+.modal-resume .game-modal-body .game-resumed {
+  display: block;
+}
